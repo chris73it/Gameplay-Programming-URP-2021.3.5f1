@@ -8,15 +8,14 @@ static class Grid
     public static int nextBuildIndexOverride = 0;
 
     public static GameObject __app;
-    // Below all general game behaviors
+    // Below all general behaviors
     public static InputController input;
 
     static Grid()
     {
-        var temp = GameObject.Find("__app");
-        if (temp != null)
+        __app = GameObject.Find("__app");
+        if (__app != null)
         {
-            __app = temp;
             input = __app.GetComponent<InputController>();
         }
     }

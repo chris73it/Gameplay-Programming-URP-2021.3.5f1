@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4791666891943089909}
   - component: {fileID: 4791666891943089906}
+  - component: {fileID: 1692066581}
   - component: {fileID: 4791666891943089908}
   m_Layer: 0
   m_Name: __app
@@ -45,7 +46,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be855ea1364779847be14ba43ead9d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextBuildIndex: 1
+  nextBuildIndex: 0
+--- !u!114 &1692066581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4791666891943089907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5563d7fb11f1f43824009d15023821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyLeft: 100
+  livesLeft: 2
+  hasSword: 0
 --- !u!114 &4791666891943089908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,3 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9de5741f55217c448458b972a987a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveInputEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  IsMovePressed: 0

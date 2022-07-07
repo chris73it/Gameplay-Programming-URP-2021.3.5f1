@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/UI.unity
     guid: a9fd064edf79b944da984cdcccd0c30b
   - enabled: 1
-    path: Assets/Scenes/Dummy.unity
-    guid: 295efd2d0b560fc4bb95450225d70a5b
-  - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: bdcafe4063385044d801ed7d15ba9395
   - enabled: 1

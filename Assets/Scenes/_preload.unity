@@ -123,27 +123,118 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1692066577 stripped
+--- !u!1 &1702432264
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4791666891943089907, guid: 58cee1ecc460d2d4b9616227385daebf,
-    type: 3}
-  m_PrefabInstance: {fileID: 4791666893137993025}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1692066581
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1702432269}
+  - component: {fileID: 1702432268}
+  - component: {fileID: 1702432267}
+  - component: {fileID: 1702432266}
+  - component: {fileID: 1702432265}
+  m_Layer: 0
+  m_Name: Avatar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1702432265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692066577}
+  m_GameObject: {fileID: 1702432264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5563d7fb11f1f43824009d15023821, type: 3}
+  m_Script: {fileID: 11500000, guid: 4761b5def8a202c4a8caa9ed55274d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyLeft: 100
-  livesLeft: 2
-  hasSword: 0
+  moveSpeed: 10
+--- !u!136 &1702432266
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702432264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1702432267
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702432264}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 87dff12af9aeac44e971c3b6e788627d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1702432268
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702432264}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1702432269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702432264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4791666893137993025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,15 +242,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4791666891943089906, guid: 58cee1ecc460d2d4b9616227385daebf,
-        type: 3}
-      propertyPath: nextBuildIndex
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4791666891943089907, guid: 58cee1ecc460d2d4b9616227385daebf,
         type: 3}
       propertyPath: m_Name
       value: __app
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1702432265}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMoveInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AvatarController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4791666891943089909, guid: 58cee1ecc460d2d4b9616227385daebf,
         type: 3}
