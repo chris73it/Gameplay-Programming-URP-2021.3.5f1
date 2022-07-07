@@ -28,7 +28,7 @@ public sealed class InputController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
         IsMovePressed = moveInput != Vector2.zero;
-        Debug.Log($"IsMovePressed {IsMovePressed}");
+        //Debug.Log($"IsMovePressed {IsMovePressed}");
         moveInputEvent.Invoke(moveInput);
     }
 

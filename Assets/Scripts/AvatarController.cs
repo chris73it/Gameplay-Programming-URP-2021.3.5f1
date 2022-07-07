@@ -19,7 +19,7 @@ public class AvatarController : MonoBehaviour
     [SerializeField] float moveSpeed;
     private void Update()
     {
-        Debug.Log("currentMovement " + currentMovement);
+        //Debug.Log("currentMovement " + currentMovement);
         transform.position += currentMovement * moveSpeed * Time.deltaTime;
     }
 }

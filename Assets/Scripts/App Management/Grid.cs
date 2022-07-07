@@ -10,6 +10,7 @@ static class Grid
     public static GameObject __app;
     // Below all general behaviors
     public static InputController input;
+    public static AvatarStats avatarStats;
 
     static Grid()
     {
@@ -17,6 +18,7 @@ static class Grid
         if (__app != null)
         {
             input = __app.GetComponent<InputController>();
+            avatarStats = __app.GetComponent<AvatarStats>();
         }
     }
 }

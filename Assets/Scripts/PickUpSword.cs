@@ -1,21 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpSword : MonoBehaviour
 {
     GameObject __app;
     AvatarStats avatarStats;
+    [SerializeField] GameObject sworddPivot;
+    [SerializeField] GameObject item;
 
-    void Start()
+    private void Start()
     {
         __app = GameObject.Find("__app");
         avatarStats = __app.GetComponent<AvatarStats>();
-        PickUpTheSword();
+
+        item = GameObject.Find("Item");
     }
 
-    void PickUpTheSword()
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("other.tag " + other.tag);
+
+        if (other.tag == "Player")
+        {
+            PickUpTheSword();
+        }
+    }
+
+    private void PickUpTheSword()
     {
         avatarStats.hasSword = true;
+        sworddPivot.transform.parent = item.transform;
+        item.transform.rotation = Quaternion.Euler(90f, 0, 90f);
+        sworddPivot.transform.localPosition = new Vector3(0, 0, 0);
     }
 }
