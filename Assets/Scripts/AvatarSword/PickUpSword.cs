@@ -3,7 +3,7 @@ using UnityEngine;
 public class PickUpSword : MonoBehaviour
 {
     GameObject __app;
-    AvatarStats avatarStats;
+    public AvatarStats avatarStats;
     [SerializeField] GameObject sworddPivot;
     [SerializeField] GameObject item;
 
