@@ -29,7 +29,7 @@ public class PickUpSword : MonoBehaviour
     {
         avatarStats.hasSword = true;
         sworddPivot.transform.parent = item.transform;
-        item.transform.rotation = Quaternion.Euler(90f, 0, 90f);
+        item.transform.rotation = Quaternion.Euler(0, 0, 90f);
         sworddPivot.transform.localPosition = new Vector3(0, 0, 0);
     }
 }
