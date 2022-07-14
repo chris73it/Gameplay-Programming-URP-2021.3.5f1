@@ -60,7 +60,7 @@ public sealed class InputController : MonoBehaviour
     private void OnShoot(InputAction.CallbackContext context)
     {
         IsShootPressed = context.ReadValueAsButton();
-        Debug.Log($"IsShootPressed {IsShootPressed}");
+        //Debug.Log($"IsShootPressed {IsShootPressed}");
     }
 
     private void OnEnable()
