@@ -5,7 +5,7 @@ public class PickUpSword : MonoBehaviour
     GameObject __app;
     public AvatarStats avatarStats;
     [SerializeField] GameObject sworddPivot;
-    [SerializeField] GameObject item;
+    GameObject item;
 
     private void Start()
     {

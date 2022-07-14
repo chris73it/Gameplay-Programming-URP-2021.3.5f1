@@ -30,6 +30,10 @@ public sealed class InputController : MonoBehaviour
         controls.Gameplay.Rotate.started += OnRotate;
         controls.Gameplay.Rotate.canceled += OnRotate;
         controls.Gameplay.Rotate.performed += OnRotate;
+
+        controls.Gameplay.Shoot.started += OnShoot;
+        controls.Gameplay.Shoot.canceled += OnShoot;
+        controls.Gameplay.Shoot.performed += OnShoot;
     }
 
     private Vector2 moveInput;
@@ -48,8 +52,15 @@ public sealed class InputController : MonoBehaviour
     {
         rotateInput = context.ReadValue<float>();
         IsRotatePressed = rotateInput != 0;
-        Debug.Log($"IsRotatePressed {IsRotatePressed}");
+        //Debug.Log($"IsRotatePressed {IsRotatePressed}");
         rotateInputEvent.Invoke(rotateInput);
+    }
+
+    [HideInInspector] public bool IsShootPressed;
+    private void OnShoot(InputAction.CallbackContext context)
+    {
+        IsShootPressed = context.ReadValueAsButton();
+        Debug.Log($"IsShootPressed {IsShootPressed}");
     }
 
     private void OnEnable()
