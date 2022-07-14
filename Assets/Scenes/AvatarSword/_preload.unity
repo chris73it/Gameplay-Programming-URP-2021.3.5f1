@@ -158,12 +158,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
         type: 3}
+      propertyPath: rotateInputEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
       propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
         type: 3}
       propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1702432265}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: rotateInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: rotateInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1702432265}
     - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
@@ -178,12 +193,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
         type: 3}
+      propertyPath: rotateInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: rotateInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnRotateInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
       propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: AvatarController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
         type: 3}
+      propertyPath: rotateInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AvatarController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
       propertyPath: moveInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791666891943089908, guid: 58cee1ecc460d2d4b9616227385daebf,
+        type: 3}
+      propertyPath: rotateInputEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4791666891943089909, guid: 58cee1ecc460d2d4b9616227385daebf,
@@ -324,6 +359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880596801930247230, guid: b48f3d892defb604cb1ab193cf44a3a9,
+        type: 3}
+      propertyPath: rotSpeed
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 8880596801930247231, guid: b48f3d892defb604cb1ab193cf44a3a9,
         type: 3}
