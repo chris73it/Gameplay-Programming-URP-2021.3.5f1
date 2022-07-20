@@ -20,6 +20,7 @@ public class GoToLevelX : MonoBehaviour
         targetDowncounter.targetDowncounter[0] = nextBuildIndex;
         if (nextBuildIndex < targetDowncounter.targetDowncounter.Length)
         {
+
             SceneManager.LoadScene(nextBuildIndex);
         }
         else

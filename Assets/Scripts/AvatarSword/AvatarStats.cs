@@ -15,6 +15,6 @@ public class AvatarStats : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(transform.gameObject);
     }
 }
