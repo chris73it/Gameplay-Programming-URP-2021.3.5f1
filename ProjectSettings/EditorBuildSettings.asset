@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AvatarSword/Level 1.unity
     guid: bdcafe4063385044d801ed7d15ba9395
+  - enabled: 1
+    path: Assets/Scenes/AvatarSword/Level 2.unity
+    guid: 8e108de43db34c54daac55521f1f4f91
   m_configObjects: {}

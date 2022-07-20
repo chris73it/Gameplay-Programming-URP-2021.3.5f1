@@ -38,6 +38,11 @@ public class Aiming : MonoBehaviour
         else
         {
             //Debug.Log("Hitting NOTHING :-(");
+
+            var tracer = Instantiate(laserTrail, ray.origin, Quaternion.identity);
+            tracer.AddPosition(ray.origin);
+            tracer.transform.position = targetForWhenWeHitNothing.transform.position;
+
             Debug.DrawLine(transform.position, targetForWhenWeHitNothing.transform.position, Color.red, debugDrawLineDuration);
             return null;
         }
@@ -45,6 +50,7 @@ public class Aiming : MonoBehaviour
 
     private void Update()
     {
+        // Are we presing the shooting button (Shift)?
         if (inputController.IsShootPressed)
         {
             GameObject objectWeAreAimingAt = Shoot();

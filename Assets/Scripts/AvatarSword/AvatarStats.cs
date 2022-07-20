@@ -12,4 +12,9 @@ public class AvatarStats : MonoBehaviour
         get { return hasSword; }
         set { hasSword = value; lightSaber.SetActive(value); }
     }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
 }
