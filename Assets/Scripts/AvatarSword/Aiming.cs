@@ -5,35 +5,34 @@ public class Aiming : MonoBehaviour
     Ray ray;
     RaycastHit hitInfo;
     InputController inputController;
-    bool shouldShoot;
-    [SerializeField] GameObject targetForWhenWeHitNothing; //FIXME
+    [SerializeField] GameObject targetForWhenWeHitNothing;
     [SerializeField] GameObject muzzle;
     [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] ParticleSystem hitEffect;
+    [SerializeField] TrailRenderer laserTrail;
 
     const float debugDrawLineDuration = 0.1f;
 
-    private void Awake()
+    void Start()
     {
-        
+        var __app = GameObject.Find("__app");
+        inputController = __app.GetComponent<InputController>();
     }
 
     GameObject Shoot()
     {
-        var __app = GameObject.Find("__app");
-        inputController = __app.GetComponent<InputController>();
-        Debug.Log("[Aiming::Shoot] shouldShoot" + shouldShoot);
-        if (inputController.IsShootPressed)
-        {
-            shouldShoot = true;
-        }
-
         ray.origin = muzzle.transform.position;
         ray.direction = muzzle.transform.forward;
 
         if (Physics.Raycast(ray, out hitInfo))
         {
             //Debug.Log("Hitting something: " + hitInfo.transform.gameObject.name);
-            Debug.DrawLine(ray.origin, hitInfo.point, Color.green, debugDrawLineDuration);
+            //Debug.DrawLine(ray.origin, hitInfo.point, Color.green, debugDrawLineDuration);
+
+            var tracer = Instantiate(laserTrail, ray.origin, Quaternion.identity);
+            tracer.AddPosition(ray.origin);
+            tracer.transform.position = hitInfo.point;
+
             return hitInfo.transform.gameObject;
         }
         else
@@ -46,17 +45,22 @@ public class Aiming : MonoBehaviour
 
     private void Update()
     {
-        GameObject objectWeAreAimingAt = Shoot();
-        if (shouldShoot && objectWeAreAimingAt != null)
+        if (inputController.IsShootPressed)
         {
-            shouldShoot = false;
-            
-            Debug.Log("[Aiming::Update] shouldShoot " + shouldShoot);
-            Target target = objectWeAreAimingAt.GetComponent<Target>();
-            if (target != null)
+            GameObject objectWeAreAimingAt = Shoot();
+            if (objectWeAreAimingAt != null)
             {
-                muzzleFlash.Emit(1);
-                target.Hit(1);
+                Target target = objectWeAreAimingAt.GetComponent<Target>();
+                if (target != null)
+                {
+                    muzzleFlash.Emit(1);
+
+                    hitEffect.transform.position = hitInfo.point;
+                    hitEffect.transform.forward = hitInfo.normal;
+                    hitEffect.Emit(1);
+
+                    target.Hit(1);
+                }
             }
         }
     }

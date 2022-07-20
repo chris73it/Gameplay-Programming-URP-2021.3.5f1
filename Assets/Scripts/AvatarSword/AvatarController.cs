@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class AvatarController : MonoBehaviour
 {
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    [SerializeField] float moveSpeed;
+    [SerializeField] float rotSpeed;
+    [SerializeField] Transform forwardPoint;
+    //[SerializeField] Transform rightPoint;
 
     private Vector3 currentMovement;
     public void OnMoveInput(Vector2 moveInput)
@@ -17,20 +17,22 @@ public class AvatarController : MonoBehaviour
         //Debug.Log("currentMovement " + currentMovement);
     }
 
-    private float currentRotation;
-    public void OnRotateInput(float rotateInput)
-    {
-        currentRotation = rotateInput; // -1 if Q is pressed; +1 if E is pressed
-        //Debug.Log("currentRotation " + currentRotation);
-    }
+    //private float currentRotation;
+    //public void OnRotateInput(float rotateInput)
+    //{
+    //    currentRotation = rotateInput; // -1 if Q is pressed; +1 if E is pressed
+    //    //Debug.Log("currentRotation " + currentRotation);
+    //}
 
-    [SerializeField] float moveSpeed;
-    [SerializeField] float rotSpeed;
     Ray ray;
     RaycastHit hitInfo;
     private void Update()
     {
-        transform.position += currentMovement * moveSpeed * Time.deltaTime;
-        transform.Rotate(Vector3.up, currentRotation * rotSpeed * Time.deltaTime);
+        //transform.position += currentMovement * moveSpeed * Time.deltaTime;
+        Vector3 fwdDir = forwardPoint.position - transform.position;
+        //Vector3 rightDir = rightPoint.position - transform.position;
+        transform.position += fwdDir * currentMovement.z * moveSpeed * Time.deltaTime;
+        //transform.position += rightDir * currentMovement.x * moveSpeed * Time.deltaTime;
+        transform.Rotate(Vector3.up, currentMovement.x * rotSpeed * Time.deltaTime);
     }
 }
