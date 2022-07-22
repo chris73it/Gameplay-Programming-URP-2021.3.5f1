@@ -26,6 +26,6 @@ public class RotateGameTitle : MonoBehaviour
             yield return null;
         }
         titleTransform.rotation = Quaternion.Euler(0, 0, 0);
-        Debug.Log("Title completely rotated");
+        //Debug.Log("Title completely rotated");
     }
 }

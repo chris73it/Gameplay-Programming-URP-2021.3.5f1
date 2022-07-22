@@ -8,15 +8,9 @@ public class MoveInputEvent : UnityEvent<Vector2>
 {
 }
 
-//[Serializable]
-//public class RotateInputEvent : UnityEvent<float>
-//{
-//}
-
 public sealed class InputController : MonoBehaviour
 {
     [SerializeField] MoveInputEvent moveInputEvent;
-    //[SerializeField] RotateInputEvent rotateInputEvent;
 
     Controls controls;
     private void Awake()
@@ -41,16 +35,6 @@ public sealed class InputController : MonoBehaviour
         //Debug.Log($"IsMovePressed {IsMovePressed}");
         moveInputEvent.Invoke(moveInput);
     }
-
-    //private float rotateInput;
-    //[HideInInspector] public bool IsRotatePressed;
-    //private void OnRotate(InputAction.CallbackContext context)
-    //{
-    //    rotateInput = context.ReadValue<float>();
-    //    IsRotatePressed = rotateInput != 0;
-    //    //Debug.Log($"IsRotatePressed {IsRotatePressed}");
-    //    rotateInputEvent.Invoke(rotateInput);
-    //}
 
     [HideInInspector] public bool IsShootPressed;
     private void OnShoot(InputAction.CallbackContext context)

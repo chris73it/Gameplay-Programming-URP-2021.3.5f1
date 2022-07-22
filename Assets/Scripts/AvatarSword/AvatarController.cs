@@ -5,7 +5,6 @@ public class AvatarController : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] float rotSpeed;
     [SerializeField] Transform forwardPoint;
-    //[SerializeField] Transform rightPoint;
 
     private Vector3 currentMovement;
     public void OnMoveInput(Vector2 moveInput)

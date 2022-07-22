@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 541}
+  m_AnchoredPosition: {x: 0, y: 939}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14046454
@@ -291,7 +291,7 @@ RectTransform:
   m_Children:
   - {fileID: 14046453}
   m_Father: {fileID: 4791666892169579569}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -723,7 +723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &765556595
 RectTransform:
   m_ObjectHideFlags: 0
@@ -764,7 +764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Won!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -853,7 +853,6 @@ GameObject:
   - component: {fileID: 1042700517}
   - component: {fileID: 1042700516}
   - component: {fileID: 1042700515}
-  - component: {fileID: 1042700518}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -926,7 +925,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1042700518}
+      - m_Target: {fileID: 2074356746}
         m_TargetAssemblyTypeName: GoToLevelX, Assembly-CSharp
         m_MethodName: LoadLevelByBuildIndex
         m_Mode: 3
@@ -976,19 +975,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042700513}
   m_CullTransparentMesh: 1
---- !u!114 &1042700518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1042700513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6659b32e13736a54b9c8324b52c6f34d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  victoryCanvas: {fileID: 0}
 --- !u!1 &1313510765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1477472886
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1261,7 +1247,7 @@ RectTransform:
   m_Children:
   - {fileID: 765556595}
   m_Father: {fileID: 4791666892169579569}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1508,6 +1494,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victoryCanvas: {fileID: 32087946}
+  levelXCanvas: {fileID: 765556594}
+  levelXPersistenceSecs: 1.5
 --- !u!114 &2074356747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1618,7 +1606,7 @@ PrefabInstance:
     - target: {fileID: 4290584586692800675, guid: b48f3d892defb604cb1ab193cf44a3a9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4290584586692800675, guid: b48f3d892defb604cb1ab193cf44a3a9,
         type: 3}
@@ -1643,17 +1631,17 @@ PrefabInstance:
     - target: {fileID: 4290584586692800675, guid: b48f3d892defb604cb1ab193cf44a3a9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4290584586692800675, guid: b48f3d892defb604cb1ab193cf44a3a9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4290584586692800675, guid: b48f3d892defb604cb1ab193cf44a3a9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4290584586692800675, guid: b48f3d892defb604cb1ab193cf44a3a9,
         type: 3}
@@ -1744,9 +1732,9 @@ Transform:
   m_Children:
   - {fileID: 2132943463}
   - {fileID: 232987640}
-  - {fileID: 4662633332304982620}
   - {fileID: 32087947}
   - {fileID: 1477472886}
+  - {fileID: 4662633332304982620}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
