@@ -1494,8 +1494,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   victoryCanvas: {fileID: 32087946}
-  levelXCanvas: {fileID: 765556594}
   levelXPersistenceSecs: 1.5
+  levelXCanvas: {fileID: 765556594}
 --- !u!114 &2074356747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,6 +1662,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Avatar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662633332372764508, guid: b48f3d892defb604cb1ab193cf44a3a9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662633332372764508, guid: b48f3d892defb604cb1ab193cf44a3a9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662633332372764508, guid: b48f3d892defb604cb1ab193cf44a3a9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662633332372764508, guid: b48f3d892defb604cb1ab193cf44a3a9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662633332372764508, guid: b48f3d892defb604cb1ab193cf44a3a9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662633332372764508, guid: b48f3d892defb604cb1ab193cf44a3a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b48f3d892defb604cb1ab193cf44a3a9, type: 3}

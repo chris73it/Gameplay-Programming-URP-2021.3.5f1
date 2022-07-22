@@ -7,23 +7,28 @@ public class GoToLevelX : MonoBehaviour
 {
     GameObject __app;
     TargetDowncounter targetDowncounter;
-    //GoToLevelX goToLevelX;
-    TextMeshProUGUI levelX;
+    
     [SerializeField] GameObject victoryCanvas;
-    [SerializeField] GameObject levelXCanvas;
+    
     [SerializeField] float levelXPersistenceSecs;
+    [SerializeField] GameObject levelXCanvas;
+    TextMeshProUGUI levelX;
+
+    private void Awake()
+    {
+        levelX = levelXCanvas.GetComponent<TextMeshProUGUI>();
+    }
 
     private void Start()
     {
         __app = GameObject.Find("__app");
         targetDowncounter = __app.GetComponent<TargetDowncounter>();
-
-        //goToLevelX = __app.GetComponent<GoToLevelX>();
-        levelX = levelXCanvas.GetComponent<TextMeshProUGUI>();
     }
 
     public void LoadLevelByBuildIndex(int nextBuildIndex)
     {
+        Debug.Log("nextBuildIndex "  + nextBuildIndex);
+
         targetDowncounter.targetDowncounter[0] = nextBuildIndex;
         if (nextBuildIndex < targetDowncounter.targetDowncounter.Length)
         {
