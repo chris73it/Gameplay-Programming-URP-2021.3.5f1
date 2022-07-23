@@ -8,7 +8,7 @@ public class GoToLevelX : MonoBehaviour
     GameObject __app;
     TargetDowncounter targetDowncounter;
     
-    [SerializeField] GameObject victoryCanvas;
+    [SerializeField] GameObject victoryText;
     
     [SerializeField] float levelXPersistenceSecs;
     [SerializeField] GameObject levelXCanvas;
@@ -16,8 +16,6 @@ public class GoToLevelX : MonoBehaviour
 
     [SerializeField] GameObject avatar;
     [SerializeField] GameObject mainCamera;
-
-    RotateAvatar rotateAvatar;
 
     private void Awake()
     {
@@ -28,7 +26,6 @@ public class GoToLevelX : MonoBehaviour
     {
         __app = GameObject.Find("__app");
         targetDowncounter = __app.GetComponent<TargetDowncounter>();
-        rotateAvatar = __app.GetComponent<RotateAvatar>();
     }
 
     public void LoadLevelByBuildIndex(int nextBuildIndex)
@@ -39,10 +36,8 @@ public class GoToLevelX : MonoBehaviour
         if (nextBuildIndex < targetDowncounter.targetDowncounter.Length)
         {
             // In the Menu scene the avatar spins, so we realign the avatar at the start of level 1.
-            //   1. Disable the RotateAvatar component, so the avatar stops spinning. 
-            //   2. Straight up the avatar to look forward (Quaternion.identity does that.)
-            //   3. Reparent the main camera to the avatar.
-            rotateAvatar.enabled = false;
+            //   1. Straight up the avatar to look forward (Quaternion.identity does that.)
+            //   2. Reparent the main camera to the avatar.
             avatar.transform.rotation = Quaternion.identity;
             mainCamera.transform.parent = avatar.transform;
 
@@ -51,7 +46,7 @@ public class GoToLevelX : MonoBehaviour
         }
         else
         {
-            victoryCanvas.SetActive(true);
+            victoryText.SetActive(true);
         }
     }
 
