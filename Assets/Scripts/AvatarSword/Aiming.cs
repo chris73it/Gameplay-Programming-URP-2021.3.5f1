@@ -10,6 +10,7 @@ public class Aiming : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] TrailRenderer laserTrail;
+    [SerializeField] AudioSource laserSound;
 
     const float debugDrawLineDuration = 0.1f;
 
@@ -21,6 +22,7 @@ public class Aiming : MonoBehaviour
 
     GameObject Shoot()
     {
+        //Debug.Log("Shooting");
         ray.origin = muzzle.transform.position;
         ray.direction = muzzle.transform.forward;
 
@@ -51,8 +53,15 @@ public class Aiming : MonoBehaviour
     private void Update()
     {
         // Are we presing the shooting button (Shift)?
+        Debug.Log("inputController.IsShootPressed " + inputController.IsShootPressed);
         if (inputController.IsShootPressed)
         {
+            Debug.Log("laserSound.Play()");
+            if (!laserSound.isPlaying)
+            {
+                laserSound.Play();
+            }
+            
             GameObject objectWeAreAimingAt = Shoot();
             if (objectWeAreAimingAt != null)
             {
@@ -68,6 +77,11 @@ public class Aiming : MonoBehaviour
                     target.Hit(1);
                 }
             }
+        }
+        else
+        {
+            Debug.Log("laserSound.Stop()");
+            laserSound.Stop();
         }
     }
 }
