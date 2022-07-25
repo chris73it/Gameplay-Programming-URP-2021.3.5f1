@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AvatarSword/UI.unity
-    guid: a9fd064edf79b944da984cdcccd0c30b
+    path: Assets/Scenes/AvatarSword/Level 0 - UI.unity
+    guid: 487799b11533fb042828e0a5b51fbf88
   - enabled: 1
     path: Assets/Scenes/AvatarSword/Level 1.unity
     guid: bdcafe4063385044d801ed7d15ba9395
