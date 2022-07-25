@@ -41,8 +41,8 @@ public class GoToLevelX : MonoBehaviour
             avatar.transform.rotation = Quaternion.identity;
             mainCamera.transform.parent = avatar.transform;
 
-            StartCoroutine("DisplayLevelX", nextBuildIndex);
             SceneManager.LoadScene(nextBuildIndex);
+            StartCoroutine("DisplayLevelX", nextBuildIndex);
         }
         else
         {
