@@ -53,10 +53,10 @@ public class Aiming : MonoBehaviour
     private void Update()
     {
         // Are we presing the shooting button (Shift)?
-        Debug.Log("inputController.IsShootPressed " + inputController.IsShootPressed);
+        //Debug.Log("inputController.IsShootPressed " + inputController.IsShootPressed);
         if (inputController.IsShootPressed)
         {
-            Debug.Log("laserSound.Play()");
+            //Debug.Log("laserSound.Play()");
             if (!laserSound.isPlaying)
             {
                 laserSound.Play();
@@ -80,7 +80,7 @@ public class Aiming : MonoBehaviour
         }
         else
         {
-            Debug.Log("laserSound.Stop()");
+            //Debug.Log("laserSound.Stop()");
             laserSound.Stop();
         }
     }
